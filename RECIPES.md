@@ -49,7 +49,7 @@ python main.py --gpu 0 --seed 0 -d cifar100 -e tiny -s res -t 10 10 -r PCQ -b ds
 ```
 ## Table 5
 ```
-# python main.py --gpu 0 --seed 0 -d cifar100         -s res -t 10 10 -r PCQ -b dw   -f cls
+# python main.py --gpu 0 --seed 0 -d cifar100         -s res -t 10 10 -r PC  -b dw   -f cls
 python main.py --gpu 0 --seed 0 -d cifar100 -e tiny -s res -t 10 10 -r PCQ -b dw   -f cls --ood 1.0
 python main.py --gpu 0 --seed 0 -d cifar100 -e tiny -s res -t 10 10 -r PCQ -b dw   -f cls --ood 0.0
 python main.py --gpu 0 --seed 0 -d cifar100 -e tiny -s res -t 10 10 -r PCQ -b dw   -f cls --oodp
