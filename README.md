@@ -65,7 +65,7 @@ This will be automatically downloaded.
   - Task splits are already in `split/`.
 
 # Train and test
-- Run `python main.py -h` for general usage.
+- Run `python main.py -h` to see the general usage.
 - With `--ex-static`, only 0-th external dataset is used for all stages.
 - Please see [[training recipes](RECIPES.md)] for replicating our paper.
 - Examples on CIFAR-100, task size 10, seed 0, gpu 0:
@@ -79,7 +79,7 @@ This will be automatically downloaded.
     ```
 
 # Evaluation
-- Run `python plotter.py -h` for general usage. `bar` and `time` replicate Figure 2(a,b) and (c,d), and the others replicate tables.
+- Run `python plotter.py -h` to see the general usage. `bar` and `time` replicate Figure 2(a,b) and (c,d), and the others replicate tables.
 - Examples:
   - Replicate CIFAR100 with task size 10 in Table 1
     ```
