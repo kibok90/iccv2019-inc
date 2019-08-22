@@ -1,0 +1,7 @@
+__ignore__/
+__pycache__/
+/data
+/fig/
+/imagenet/
+/res/
+/tiny/
