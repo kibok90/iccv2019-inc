@@ -67,7 +67,7 @@ This will be automatically downloaded.
 # Train and test
 - Run `python main.py -h` for general usage.
 - With `--ex-static`, only 0-th external dataset is used for all stages.
-- Please see [[this](RECIPES.md)] for replicating our paper.
+- Please see [[training recipes](RECIPES.md)] for replicating our paper.
 - Examples on CIFAR-100, task size 10, seed 0, gpu 0:
   - GD (Ours) without external data
     ```
