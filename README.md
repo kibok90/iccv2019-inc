@@ -1,5 +1,5 @@
 # Introduction
-This repository implements [Lee et al. Overcoming Catastrophic Forgetting with Unlabeled Data in the Wild. In ICCV 2019](https://arxiv.org/abs/1903.12648) in PyTorch.
+This repository implements [Lee et al. Overcoming Catastrophic Forgetting with Unlabeled Data in the Wild. In ICCV, 2019](https://arxiv.org/abs/1903.12648) in PyTorch.
 ```
 @inproceedings{lee2019overcoming,
   title={Overcoming Catastrophic Forgetting with Unlabeled Data in the Wild},
@@ -8,6 +8,12 @@ This repository implements [Lee et al. Overcoming Catastrophic Forgetting with U
   year={2019}
 }
 ```
+This implementation also includes the state-of-the-art distillation-based methods for class-incremental learning (a.k.a. single-head continual learning):
+- Learning without forgetting [[LwF, ECCV 2016](https://arxiv.org/abs/1606.09282)]
+- Distillation and retrospection [[DR, ECCV 2018](http://openaccess.thecvf.com/content_ECCV_2018/papers/Saihui_Hou_Progressive_Lifelong_Learning_ECCV_2018_paper.pdf)]
+- End-to-end incremental learning [[E2E, ECCV 2018](https://arxiv.org/abs/1807.09536)]
+
+Please see [[training recipes](RECIPES.md)] for replicating them.
 
 # Dependencies
 - Python 3.6.8
@@ -24,6 +30,7 @@ This repository implements [Lee et al. Overcoming Catastrophic Forgetting with U
 
 # Data
 You may either generate datasets by yourself or download `h5` files in the following links.
+You may not download external data if you don't want to use them.
 All data are assumed to be in `data/{dataset}/`. (`{dataset} = cifar100, tiny, imagenet`)
 
 ### CIFAR-100 (Training data)
@@ -55,7 +62,7 @@ This will be automatically downloaded.
     - This takes a long time, so running in parallel is recommended.
 - Don't DIY
   - Download [[train (1.5GB)](https://drive.google.com/open?id=1FyaXjtCPg1_33i30--oORtspzFwSAa30)], [[test (0.3GB)](https://drive.google.com/open?id=18vYTxXpVB0lMrMitw3fVm2abGhWW37sN)] and place them in `data/imagenet/`.
-  - Download [[here (20 files; each takes 3GB)](https://drive.google.com/drive/u/1/folders/194-V0tSOA82mTqFmDzEa83wA6B56Itr2)] and place them in `data/imagenet/`.
+  - Download [[here (20 files; each takes 3GB)](https://drive.google.com/drive/folders/194-V0tSOA82mTqFmDzEa83wA6B56Itr2)] and place them in `data/imagenet/`.
     - Download [[0 (3GB)](https://drive.google.com/open?id=1eIw7kVvMM1gzzdq_qx2qaViYF2Qx4mTb)] only, if you use `--ex-static` for training.
 
 # Task splits
@@ -67,7 +74,7 @@ This will be automatically downloaded.
 # Train and test
 - Run `python main.py -h` to see the general usage.
 - With `--ex-static`, only 0-th external dataset is used for all stages.
-- Please see [[training recipes](RECIPES.md)] for replicating our paper.
+- Please see [[training recipes](RECIPES.md)] for replicating the models compared in our paper.
 - Examples on CIFAR-100, task size 10, seed 0, gpu 0:
   - GD (Ours) without external data
     ```
