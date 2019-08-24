@@ -1,8 +1,8 @@
 # Training recipes
 Here are commands to train models on CIFAR-100 (`-d cifar100`) with TinyImages as an external data source (`-e tiny`) when the task size is 10 (`-t 10 10`), using 0-th gpu (`-gpu 0`), as the 0-th trial (`--seed 0`), and save the results in `res/` (`-s res`).
 
-## Stage 1 models
-All models start from one of these models.
+## Base models (0-th stage)
+All class-incremental learning models below start from one of these models.
 
 Without confidence calibration
 ```
